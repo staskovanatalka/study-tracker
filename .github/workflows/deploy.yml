@@ -28,7 +28,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps
@@ -39,8 +38,6 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # Novější verze Angularu buildují do dist/study-tracker/browser
-      # Pokud by tvůj Angular buildoval přímo do dist/study-tracker, stačí umazat /browser
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
